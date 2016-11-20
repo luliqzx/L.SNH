@@ -1,0 +1,12 @@
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\L.SNH.Domain.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\L.SNH.Domain.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\obj\Debug\L.SNH.Domain.csprojResolveAssemblyReference.cache
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\obj\Debug\L.SNH.Domain.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\obj\Debug\L.SNH.Domain.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\FluentNHibernate.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\Iesi.Collections.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\NHibernate.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\FluentNHibernate.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\FluentNHibernate.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\Iesi.Collections.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Domain\bin\Debug\NHibernate.xml

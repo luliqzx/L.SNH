@@ -1,0 +1,17 @@
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\L.SNH.Cons.exe.config
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\L.SNH.Cons.exe
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\L.SNH.Cons.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\L.SNH.Domain.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\SimpleInjector.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\FluentNHibernate.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\NHibernate.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\Iesi.Collections.dll
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\L.SNH.Domain.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\SimpleInjector.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\FluentNHibernate.pdb
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\FluentNHibernate.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\NHibernate.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\bin\Debug\Iesi.Collections.xml
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\obj\Debug\L.SNH.Cons.csprojResolveAssemblyReference.cache
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\obj\Debug\L.SNH.Cons.exe
+D:\LUCKY\RISET\NHibernate\L.SNH\L.SNH.Cons\obj\Debug\L.SNH.Cons.pdb
