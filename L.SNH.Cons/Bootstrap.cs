@@ -1,4 +1,5 @@
 ﻿using L.SNH.Cons.Facades;
+using L.SNH.Domain.Common;
 using L.SNH.Domain.Repositories;
 using SimpleInjector;
 using System;
@@ -16,6 +17,7 @@ namespace L.SNH.Cons
             // 1. Create a new Simple Injector container
 
             // 2. Configure the container (register)
+            container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Singleton);
             container.Register<IActFacade, ActFacade>(Lifestyle.Singleton);
             container.Register<IActRepository, ActRepository>(Lifestyle.Singleton);
 

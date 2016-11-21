@@ -15,10 +15,12 @@ namespace L.SNH.Cons
         static void Main(string[] args)
         {
             var container = new Container();
-
             Bootstrap.Start(container);
-
             actFacade = container.GetInstance<IActFacade>();
+            //actFacade.Create();
+            //actFacade.Update();
+            //actFacade.Delete();
+            actFacade.TestAll();
         }
     }
 }

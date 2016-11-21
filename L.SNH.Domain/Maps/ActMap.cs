@@ -12,11 +12,11 @@ namespace L.SNH.Domain.Maps
     {
         public ActMap()
         {
-            this.Id(x => x.Id).GeneratedBy.Assigned(x => x.AddParam("Id", "0000000000"));
+            this.Id(x => x.Id).GeneratedBy.Assigned();
             this.Map(x => x.Name);
             this.Map(x => x.Username);
             this.Map(x => x.Password);
-            this.Map(x => x.CreateDate).Default(DateTime.Now.ToString());
+            this.Map(x => x.CreateDate);
         }
     }
 }

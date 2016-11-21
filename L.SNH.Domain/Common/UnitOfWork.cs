@@ -16,6 +16,7 @@ namespace L.SNH.Domain.Common
         void BeginTransaction();
         void Commit();
         void Rollback();
+        ISession CreateSession();
     }
 
     public class UnitOfWork : IUnitOfWork
@@ -31,7 +32,7 @@ namespace L.SNH.Domain.Common
             if (true) // SQLITE
             {
                 flcfg
-                    .Database(SQLiteConfig());
+                    .Database(MsSqlConfiguration.MsSql2008.ConnectionString(c => c.FromConnectionStringWithKey("MyConnectionString")));
             }
             flcfg.Mappings(x => x.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()));
             flcfg.ExposeConfiguration(cfg => new SchemaUpdate(cfg).Execute(true, true));
@@ -45,6 +46,10 @@ namespace L.SNH.Domain.Common
 
         public void BeginTransaction()
         {
+            if (!this.Session.IsOpen)
+            {
+                this.Session = CreateSession();
+            }
             _transaction = Session.BeginTransaction();
         }
 
@@ -98,6 +103,11 @@ namespace L.SNH.Domain.Common
         {
             return SQLiteConfiguration.Standard.ConnectionString(
                 c => c.FromConnectionStringWithKey("MyConnectionString"));
+        }
+
+        public ISession CreateSession()
+        {
+            return _sessionFactory.OpenSession();
         }
     }
 }
