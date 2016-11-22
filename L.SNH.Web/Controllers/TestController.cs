@@ -25,17 +25,27 @@ namespace L.SNH.Web.Controllers
         {
             UnitOfWork.BeginTransaction();
             Act Act = this.ActRepo.GetBy(x => x.Id == "testweb");
-            this.ActRepo.Delete(Act);
+            if (Act != null)
+            {
+                this.ActRepo.Delete(Act);
+            }
 
             Act = new Act();
             Act.Id = "testweb";
             Act.Name = "testweb";
             Act.Username = "testweb";
             Act.CreateDate = DateTime.Now;
+            Act.UpdateDate = DateTime.Now;
+            Act.OtherAddress = new List<OtherAddress>();
+            Act.OtherAddress.Add(new OtherAddress { Id = "Addr1", Address = "Addr1", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
+            Act.OtherAddress.Add(new OtherAddress { Id = "Addr2", Address = "Addr2", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
             this.ActRepo.Save(Act);
 
             Act = this.ActRepo.GetBy(x => x.Id == "testweb");
             Act.Password = "testweb";
+            Act.Address = "Prime";
+            Act.OtherAddress.Remove(Act.OtherAddress[1]);
+            Act.OtherAddress.Add(new OtherAddress { Id = "Addr3", Address = "Addr3", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
             this.ActRepo.Update(Act);
             UnitOfWork.Commit();
 

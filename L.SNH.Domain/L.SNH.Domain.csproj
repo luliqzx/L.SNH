@@ -52,7 +52,9 @@
     <Compile Include="Common\UnitOfWork.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Act.cs" />
+    <Compile Include="Entities\OtherAddress.cs" />
     <Compile Include="Maps\ActMap.cs" />
+    <Compile Include="Maps\OtherAddressMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ActRepository.cs" />
     <Compile Include="Repositories\IRepository.cs" />

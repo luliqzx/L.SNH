@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace L.SNH.Domain.Maps
 {
-    public class ActMap : ClassMap<Act>
+    public class OtherAddressMap : ClassMap<OtherAddress>
     {
-        public ActMap()
+        public OtherAddressMap()
         {
             this.Id(x => x.Id).GeneratedBy.Assigned();
-            this.Map(x => x.Name);
-            this.Map(x => x.Username);
-            this.Map(x => x.Password);
             this.Map(x => x.Address);
+            this.Map(x => x.Country);
+            this.Map(x => x.Region);
+            this.Map(x => x.PostalCode);
 
-            this.HasMany(x => x.OtherAddress).Cascade.All();
+            this.References(x => x.Act);
 
             #region Audit Trail
 
@@ -29,7 +29,7 @@ namespace L.SNH.Domain.Maps
             this.Map(x => x.UpdateDate);
             this.Map(x => x.UpdateTerminal);
 
-            this.Version(x => x.Version).CustomType<int>();
+            //this.Version(x => x.Version).CustomType<int>().Generated.Always();
             #endregion
         }
     }
