@@ -17,6 +17,7 @@ namespace L.SNH.Domain.Common
         void Commit();
         void Rollback();
         ISession CreateSession();
+        ISession Session { get; set; }
     }
 
     public class UnitOfWork : IUnitOfWork

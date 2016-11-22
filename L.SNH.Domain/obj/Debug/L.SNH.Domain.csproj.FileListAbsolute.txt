@@ -21,3 +21,4 @@ D:\L\RISET\L.SNH\L.SNH\L.SNH.Domain\bin\Debug\FluentNHibernate.xml
 D:\L\RISET\L.SNH\L.SNH\L.SNH.Domain\bin\Debug\Iesi.Collections.xml
 D:\L\RISET\L.SNH\L.SNH\L.SNH.Domain\bin\Debug\NHibernate.xml
 D:\L\RISET\L.SNH\L.SNH\L.SNH.Domain\obj\Debug\L.SNH.Domain.pdb
+D:\L\RISET\L.SNH\L.SNH\L.SNH.Domain\obj\Debug\L.SNH.Domain.csprojResolveAssemblyReference.cache

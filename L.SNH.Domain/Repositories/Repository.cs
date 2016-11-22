@@ -13,7 +13,7 @@ namespace L.SNH.Domain.Repositories
 {
     public class Repository<T> : IRepository<T>
     {
-        protected UnitOfWork _unitOfWork { get; set; }
+        protected IUnitOfWork _unitOfWork { get; set; }
         public Repository(IUnitOfWork unitOfWork)
         {
             _unitOfWork = (UnitOfWork)unitOfWork;
