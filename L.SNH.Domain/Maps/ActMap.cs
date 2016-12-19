@@ -14,11 +14,9 @@ namespace L.SNH.Domain.Maps
         {
             this.Id(x => x.Id).GeneratedBy.Assigned();
             this.Map(x => x.Name);
-            this.Map(x => x.Username);
-            this.Map(x => x.Password);
-            this.Map(x => x.Address);
-
+            this.HasOne(x => x.Profile).Cascade.All();
             this.HasMany(x => x.OtherAddress).Cascade.All();
+            this.HasManyToMany(x => x.Groups).Table("UserGroup").ParentKeyColumn("ActId").ChildKeyColumn("GroupId").Cascade.All();
 
             #region Audit Trail
 
@@ -28,9 +26,13 @@ namespace L.SNH.Domain.Maps
             this.Map(x => x.UpdateBy);
             this.Map(x => x.UpdateDate);
             this.Map(x => x.UpdateTerminal);
+            this.Version(x => x.Version).CustomType<int>();
 
-            this.Version(x => x.Version).CustomType<int>().Generated.Always();
             #endregion
+
+            this.Map(x => x.Type);
+
+            this.HasMany(x => x.Menus).KeyColumn("ActId");
         }
     }
 }

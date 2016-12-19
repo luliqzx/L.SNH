@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace L.SNH.Domain.Entities
 {
-    public class Counter : BaseEntity<Counter.CompositeCounter>
+    public class Counter : BaseEntity<string>
     {
-        public virtual int Year { get { return this.Id.Year; } set { this.Id.Year = value; } }
-        public virtual int Month { get { return this.Id.Month; } set { this.Id.Month = value; } }
-        public virtual string CounterType { get { return this.Id.CounterType; } set { this.Id.CounterType = value; } }
+        public virtual int Year { get; set; }
+        public virtual int Month { get; set; }
+        public virtual string CounterType { get; set; }
 
         public virtual int _Counter { get; set; }
         public virtual string _DefaultCounter
         {
             get
             {
-                return string.Format(@"{0}{1}{2}{3}", Id.CounterType, Id.Year, Id.Month.ToString().PadLeft(2, '0'), _Counter.ToString().PadLeft(4, '0'));
+                return string.Format(@"{0}{1}{2}{3}", CounterType, Year, Month.ToString().PadLeft(2, '0'), _Counter.ToString().PadLeft(4, '0'));
             }
         }
 
@@ -26,7 +26,7 @@ namespace L.SNH.Domain.Entities
             Counter Counter = (Counter)obj;
             if (Counter != null)
             {
-                if (Counter.Id.CounterType == this.Id.CounterType && Counter.Id.Month == this.Id.Month && Counter.Id.Year == this.Id.Year)
+                if (Counter.CounterType == this.CounterType && Counter.Month == this.Month && Counter.Year == this.Year)
                 {
                     return true;
                 }
@@ -37,7 +37,7 @@ namespace L.SNH.Domain.Entities
         public override int GetHashCode()
         {
             int i = 0;
-            i = this.Id.Year.GetHashCode() + this.Id.Month.GetHashCode() + this.Id.CounterType.GetHashCode();
+            i = this.Year.GetHashCode() + this.Month.GetHashCode() + this.CounterType.GetHashCode();
             return i;
         }
 

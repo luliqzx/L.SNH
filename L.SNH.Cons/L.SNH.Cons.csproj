@@ -46,7 +46,7 @@
   <ItemGroup>
     <Compile Include="Bootstrap.cs" />
     <Compile Include="Facades\ActFacade.cs" />
-    <Compile Include="Facades\DefaultFacade.cs" />
+    <Compile Include="Facades\CounterFacade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

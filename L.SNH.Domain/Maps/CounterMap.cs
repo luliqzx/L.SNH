@@ -13,9 +13,9 @@ namespace L.SNH.Domain.Maps
         public CounterMap()
         {
             this.CompositeId()
-                .KeyProperty(x => x.Id.Year)
-                .KeyProperty(x => x.Id.Month)
-                .KeyProperty(x => x.Id.CounterType);
+                .KeyProperty(x => x.Year)
+                .KeyProperty(x => x.Month)
+                .KeyProperty(x => x.CounterType);
             this.Map(x => x._Counter);
 
             #region Audit Trail
@@ -27,7 +27,7 @@ namespace L.SNH.Domain.Maps
             this.Map(x => x.UpdateDate);
             this.Map(x => x.UpdateTerminal);
 
-            this.Version(x => x.Version).CustomType<int>().Generated.Always();
+            this.Version(x => x.Version).CustomType<int>();
             #endregion
         }
     }

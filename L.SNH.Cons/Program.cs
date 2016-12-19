@@ -18,7 +18,7 @@ namespace L.SNH.Cons
             var container = new Container();
             Bootstrap.Start(container);
             actFacade = container.GetInstance<IActFacade>();
-            //actFacade.Create();
+            actFacade.Create();
             //actFacade.Update();
             //actFacade.Delete();
             //actFacade.TestAll();

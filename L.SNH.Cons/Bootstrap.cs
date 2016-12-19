@@ -22,7 +22,8 @@ namespace L.SNH.Cons
             container.Register<IActFacade, ActFacade>(Lifestyle.Singleton);
             container.Register<IActRepository, ActRepository>(Lifestyle.Singleton);
             container.Register<ICountRepository, CountRepository>(Lifestyle.Singleton);
-            container.Register<IDefaultFacade, DefaultFacade>(Lifestyle.Singleton);
+            container.Register<IPrivilegeRepository, PrivilegeRepository>(Lifestyle.Singleton);
+            container.Register<IDefaultFacade, CounterFacade>(Lifestyle.Singleton);
 
             // 3. Optionally verify the container's configuration.
             container.Verify();

@@ -33,7 +33,7 @@ namespace L.SNH.Web.Controllers
             Act = new Act();
             Act.Id = "testweb";
             Act.Name = "testweb";
-            Act.Username = "testweb";
+            //Act.Username = "testweb";
             Act.CreateDate = DateTime.Now;
             Act.UpdateDate = DateTime.Now;
             Act.OtherAddress = new List<OtherAddress>();
@@ -42,8 +42,8 @@ namespace L.SNH.Web.Controllers
             this.ActRepo.Save(Act);
 
             Act = this.ActRepo.GetBy(x => x.Id == "testweb");
-            Act.Password = "testweb";
-            Act.Address = "Prime";
+            //Act.Password = "testweb";
+            //Act.Address = "Prime";
             Act.OtherAddress.Remove(Act.OtherAddress[1]);
             Act.OtherAddress.Add(new OtherAddress { Id = "Addr3", Address = "Addr3", CreateDate = DateTime.Now, UpdateDate = DateTime.Now });
             this.ActRepo.Update(Act);
@@ -62,14 +62,14 @@ namespace L.SNH.Web.Controllers
             Act = new Act();
             Act.Id = "testweb";
             Act.Name = "testweb";
-            Act.Username = "testweb";
+            //Act.Username = "testweb";
             Act.CreateDate = DateTime.Now;
             UnitOfWork.BeginTransaction();
             this.ActRepo.Save(Act);
             UnitOfWork.Commit();
 
             Act = this.ActRepo.GetBy(x => x.Id == "testweb");
-            Act.Password = "testweb";
+            //Act.Password = "testweb";
             UnitOfWork.BeginTransaction();
             this.ActRepo.Update(Act);
             UnitOfWork.Commit();
