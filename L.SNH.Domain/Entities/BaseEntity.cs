@@ -15,6 +15,6 @@ namespace L.SNH.Domain.Entities
         public virtual string UpdateBy { get; set; }
         public virtual DateTime UpdateDate { get; set; }
         public virtual string UpdateTerminal { get; set; }
-        public virtual TimeSpan Version { get; set; }
+        public virtual int Version { get; set; }
     }
 }

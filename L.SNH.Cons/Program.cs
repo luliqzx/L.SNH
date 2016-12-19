@@ -11,6 +11,7 @@ namespace L.SNH.Cons
     class Program
     {
         static IActFacade actFacade { get; set; }
+        static IDefaultFacade counterFacade { get; set; }
 
         static void Main(string[] args)
         {
@@ -20,7 +21,14 @@ namespace L.SNH.Cons
             //actFacade.Create();
             //actFacade.Update();
             //actFacade.Delete();
-            actFacade.TestAll();
+            //actFacade.TestAll();
+
+            counterFacade = container.GetInstance<IDefaultFacade>();
+
+            counterFacade.Delete();
+            counterFacade.Save();
+            counterFacade.Update();
+            counterFacade.Get();
         }
     }
 }

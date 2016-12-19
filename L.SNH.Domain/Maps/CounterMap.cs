@@ -8,17 +8,15 @@ using System.Threading.Tasks;
 
 namespace L.SNH.Domain.Maps
 {
-    public class ActMap : ClassMap<Act>
+    public class CounterMap : ClassMap<Counter>
     {
-        public ActMap()
+        public CounterMap()
         {
-            this.Id(x => x.Id).GeneratedBy.Assigned();
-            this.Map(x => x.Name);
-            this.Map(x => x.Username);
-            this.Map(x => x.Password);
-            this.Map(x => x.Address);
-
-            this.HasMany(x => x.OtherAddress).Cascade.All();
+            this.CompositeId()
+                .KeyProperty(x => x.Id.Year)
+                .KeyProperty(x => x.Id.Month)
+                .KeyProperty(x => x.Id.CounterType);
+            this.Map(x => x._Counter);
 
             #region Audit Trail
 

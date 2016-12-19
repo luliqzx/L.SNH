@@ -4,6 +4,7 @@ using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -13,7 +14,7 @@ namespace L.SNH.Domain.Common
 {
     public interface IUnitOfWork
     {
-        void BeginTransaction();
+        void BeginTransaction(IsolationLevel IsolationLevel = IsolationLevel.ReadCommitted);
         void Commit();
         void Rollback();
         ISession CreateSession();
@@ -45,13 +46,13 @@ namespace L.SNH.Domain.Common
             Session = _sessionFactory.OpenSession();
         }
 
-        public void BeginTransaction()
+        public void BeginTransaction(IsolationLevel IsolationLevel = IsolationLevel.ReadCommitted)
         {
             if (!this.Session.IsOpen)
             {
                 this.Session = CreateSession();
             }
-            _transaction = Session.BeginTransaction();
+            _transaction = Session.BeginTransaction(IsolationLevel);
         }
 
         public void Commit()

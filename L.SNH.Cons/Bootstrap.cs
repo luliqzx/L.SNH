@@ -1,5 +1,6 @@
 ﻿using L.SNH.Cons.Facades;
 using L.SNH.Domain.Common;
+using L.SNH.Domain.Entities;
 using L.SNH.Domain.Repositories;
 using SimpleInjector;
 using System;
@@ -20,6 +21,8 @@ namespace L.SNH.Cons
             container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Singleton);
             container.Register<IActFacade, ActFacade>(Lifestyle.Singleton);
             container.Register<IActRepository, ActRepository>(Lifestyle.Singleton);
+            container.Register<ICountRepository, CountRepository>(Lifestyle.Singleton);
+            container.Register<IDefaultFacade, DefaultFacade>(Lifestyle.Singleton);
 
             // 3. Optionally verify the container's configuration.
             container.Verify();
